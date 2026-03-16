@@ -1,12 +1,3 @@
-"""
-DATATHON PASSOS MÁGICOS - FASE 1 E 2
-Limpeza e Preparação de Dados
-
-Objetivo: Preparar dados para análise descritiva e modelagem preditiva
-Autor: Manus
-Data: 2024-02-21
-"""
-
 import pandas as pd
 import numpy as np
 from datetime import datetime
