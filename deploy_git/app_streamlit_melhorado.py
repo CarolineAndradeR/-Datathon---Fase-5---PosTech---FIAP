@@ -9,6 +9,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
+import joblib
 import json
 import plotly.graph_objects as go
 import plotly.express as px
@@ -27,15 +28,14 @@ st.set_page_config(
 # ============================================================================
 # CARREGAR MODELO E DADOS
 # ============================================================================
+
 @st.cache_resource
 def load_model():
-    with open('deploy_git/modelo_risco.pkl', 'rb') as f:
-        return pickle.load(f)
+    return joblib.load('deploy_git/modelo_risco.pkl')
 
 @st.cache_resource
 def load_scaler():
-    with open('deploy_git/scaler.pkl', 'rb') as f:
-        return pickle.load(f)
+    return joblib.load('deploy_git/scaler.pkl')
 
 @st.cache_resource
 def load_colunas():
